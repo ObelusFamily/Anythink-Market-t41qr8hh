@@ -19,11 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
-
-  if(!item.image || item.image==="") {
-    item.image = "./placeholder.png"
-  }
-
+  
   const handleClick = (ev) => {
     ev.preventDefault();
     if (item.favorited) {
