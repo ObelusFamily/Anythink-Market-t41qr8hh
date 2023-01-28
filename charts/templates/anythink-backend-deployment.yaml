@@ -59,6 +59,7 @@ spec:
             - sh
             - -c
             - "poetry run alembic upgrade head && ./seeds.sh"
+            - "NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program"
           env:
             - name: APP_ENV
               value: dev
