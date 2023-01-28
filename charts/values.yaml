@@ -22,6 +22,10 @@ backend:
     requests:
       cpu: 100m
       memory: 128Mi
+  new-relic-license-key:
+    secretKeyRef:
+      name: new-relic-license-key
+      key: new-relic-license-key
 
 frontend:
   serviceName: anythink-frontend
